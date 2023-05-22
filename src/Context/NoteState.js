@@ -41,7 +41,6 @@ const NoteState = (props) => {
     }
 
     const deleteNote = async (id) => {
-      console.log(id);
         await fetch(`https://backend-qpk5.onrender.com/api/notes/deletenote/${id}`, {
             method: "DELETE",
             headers: {
