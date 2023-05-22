@@ -5,7 +5,7 @@ const NoteState = (props) => {
     const [notes, setNotes] = useState([])
 
     const getNotes = async () => {
-        const response = await fetch("http://localhost:3001/api/notes/fetchallnotes", {
+        const response = await fetch("https://backend-qpk5.onrender.com/api/notes/fetchallnotes", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -17,7 +17,7 @@ const NoteState = (props) => {
     }
 
     const addNote = async ({title, description, tag}) => {
-        const response = await fetch("http://localhost:3001/api/notes/addnote", {
+        const response = await fetch("https://backend-qpk5.onrender.com/api/notes/addnote", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const NoteState = (props) => {
     }
 
     const deleteNote = async (id) => {
-        await fetch(`http://localhost:3001/api/notes/deletenote/${id}`, {
+        await fetch(`https://backend-qpk5.onrender.com/api/notes/deletenote/${id}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const NoteState = (props) => {
 
     const updateNote = async ({id, title, description, tag}) => {
         console.log(id)
-        await fetch(`http://localhost:3001/api/notes/updatenote/${id}`, {
+        await fetch(`https://backend-qpk5.onrender.com/api/notes/updatenote/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
